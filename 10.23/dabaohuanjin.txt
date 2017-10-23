@@ -1,0 +1,18 @@
+ANDROID_HOME      C:\Android\sdk
+ANT_HOME          C:\apache-ant-1.10.1
+CLASSPATH         .;%JAVA_HOME%/LIB/dt.jar（可以不加）
+JAVA_HOME         C:\Java\jdk1.8.0_131
+
+Path              
+%JAVA_HOME%\bin;
+%ANT_HOME%\bin;
+%ANDROID_HOME%\platform-tools;
+%ANDROID_HOME%\tools;
+%SystemRoot%\system32;
+%SystemRoot%;
+%SystemRoot%\System32\Wbem;
+%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;
+C:\nodejs\;
+C:\Program Files\Git\cmd;
+C:\ProgramData\Oracle\Java\javapath;
+C:\Android\Android Studio\gradle\gradle-3.2\bin

@@ -1,0 +1,151 @@
+npm -v
+npm i -g smart-npm 
+snpm -v
+snpm i -g bower
+
+
+必须1.node.js
+2.java
+3.android    苹果xcode
+4.apche ant
+
+%USERPROFILE%\AppData\Local\Microsoft\WindowsApps
+C:\Users\rober\AppData\Roaming\npm
+
+jquery
+0.98-1.3
+1.7.x
+1.x    2.x(3.x)
+1.12.1 2.2.1
+1.15.21 3.2.1
+
+ npm init
+bower init
+
+bower install --save jquery
+bower install --save bootstrap
+
+
+snpm i -g gulp
+snpm i -save  gulp  
+snpm i -save-dev  gulp  
+
+Cordova
+phonegap
+
+adobe ps fl fw dw
+apache
+
+
+
+snpm i -g cordova
+snpm i -g http-server
+ 
+npm config get registry
+
+
+cordova create demo
+
+http-server
+
+
+
+
+9.18
+bower i --save bootstrap@3.3.7
+
+框架react    
+MVC
+M:MODEL  模型 数据
+V:VIWER   视图  网页页面
+c:controller   控制器
+
+babel
+snpm i -g typescript
+TypeScript   TS
+
+snpm i --save browser-sync
+
+
+
+SASS,LESS
+snpm i -g node-sass安装sass
+.scss s
+
+服务器模式：
+http://localhost:3000/
+
+本地模式（不能用AJAX, 路由）
+file://
+
+.map()
+var a=[1,2,3,4,5]
+for(var i=0;i<a.length;i++){
+
+}
+.map(function (el, index, arr){ })
+.forEach(function (el, index, arr){ })
+.filter(function (el, index, arr){ })
+indexOf(), .lastIndexOf
+.every(function (el, index, arr){ })  
+.some(function (el, index, arr){ })
+.sort
+
+
+
+
+
+
+npm i --save vue-cli   安装vue
+npm start//
+bower i --save vue
+
+
+9.20
+v-bind:style=""改样式class
+v-text="books"
+v-on: 简写 @
+v-show=""显示
+v-hide=""
+v-model
+v-if 标签变注释
+
+
+9.21
+split（""）拆分字符
+toUpperCase 转大写
+toUpperCase 转小写
+slice(1)从1开始后面
+.toFixed(2)精确到小数点2位（会转成字符串， 只能作用在数字上） 
+.crverse()倒序reverse()
+监视器不要用太多
+ vm.$watch("cart", function () {
+            console.log("数据改变了！", Date.now());
+            this.sum();
+        }, { deep: true });
+
+9.22
+zepto
+cordova create zapp
+npm init
+snpm i --save gulp browser-sync  一起下载gulp browser
+node-sass -v  
+node-sass --help
+node-sass   --output-style  expanded app.scss > app.css
+
+
+9.25
+JAVA jdk => 编译 =>手机 app （apk）
+android sdk =>
+xcode  =>   => ios (.app)
+apache ant 
+node.js   cordova
+
+
+www.android-studio.org
+[www]RESOURCE 
+
+%ANT_HOME%\bin
+ant -version
+where javac
+
