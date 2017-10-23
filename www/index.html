@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Document</title>
+</head>
+<style>
+    .my-bar {
+        font-size: 24px;
+    }
+
+    .my-bar::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .my-bar div,
+    .my-bar p {
+        float: left;
+        text-align: center;
+        width: calc(60% - 20px);
+    }
+
+    .my-bar div:first-child,
+    .my-bar p:first-child {
+        width: 20%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .my-bar div:last-child,
+    .my-bar p:last-child {
+        width: 20%;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .my-row {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .my-row::after {
+        content: '';
+        clear: both;
+    }
+
+    .my-row div,
+    .my-row p {
+        margin: 0;
+        padding: 10px 0;
+        float: left;
+        width: 14.286%;
+    }
+
+    .color {
+        background: yellow;
+        color: white;
+    }
+
+    .kstime {
+        float: right;
+        color: rgb(68, 65, 65);
+        font-size: 12px;
+        margin-right: 10px
+    }
+
+    .titlel {
+        float: left;
+        color: black;
+        margin-left: 10px;
+        list-style: none;
+    }
+
+    .bcolor {
+        background: seagreen;
+    }
+</style>
+</style>
+
+<body>
+    <!-- 日历 -->
+    <div class="app-page" data-page="home">
+        <div class="app-topbar">
+            <div class="app-title">todo</div>
+        </div>
+        <div class="app-content">
+            <div class="app-section">
+                <div class="my-table">
+                    <div class="my-bar">
+                        <div class="app-button btn-prev">&lt;</div>
+                        <div id="cd">&nbsp;</div>
+                        <div class="app-button btn-next">&gt;</div>
+                    </div>
+                    <div class="my-row">
+                        <div>日</div>
+                        <div>一</div>
+                        <div>二</div>
+                        <div>三</div>
+                        <div>四</div>
+                        <div>五</div>
+                        <div>六</div>
+                    </div>
+                </div>
+                <div class="my-row curr">
+                    <!-- 日期 -->
+                </div>
+                <div class="app-section">
+                    <div class="app-button tianjia" data-target="page2">添加事件</div>
+                </div>
+                <div class="app-section">
+                    <div class="app-button" data-target="page5">我的事件</div>
+                </div>
+                <div class="app-section">
+                    <div class="app-button"> <a href="ma.html">ss</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 我的事件 -->
+    <div class="app-page page5" data-page="page5">
+        <div class="app-topbar">
+            <div class="app-button left" data-back>返回 </div>
+        </div>
+        <div class="app-section curr">
+
+        </div>
+
+    </div>
+    <!-- cf -->
+    <div class="app-page page4" data-page="page4">
+        <div class="app-topbar">
+            <div class="app-button left" data-target="page2">返回 </div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">一次性活动</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">每天</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 每个工作日（周一至周五）</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">每周（每周的星期四）</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 每月（每月的第四个周四）</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 每月（28日）</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">每年（9月28日）</div>
+        </div>
+    </div>
+    <!-- tixing -->
+    <div class="app-page page3" data-page="page3">
+        <div class="app-topbar">
+            <div class="app-button left" data-target="page2">返回</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">不提醒</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 5分钟前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 10分钟前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 15分钟前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">30分钟前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx"> 一小时前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">一天前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">2天前</div>
+        </div>
+        <div class="app-section">
+            <div class="app-button tx">一周前</div>
+        </div>
+    </div>
+    <!-- 本地日历 -->
+    <div class="app-page" data-page="page2">
+        <div class="app-topbar">
+            <div class="app-button left" data-target="home">日历 </div>
+            <div class="app-title">本地日历</div>
+            <div class="app-button right ">确定</div>
+        </div>
+        <div class="app-content bdrli">
+            <input type="text" class="app-input" placeholder="活动提醒内容" id="neir">
+            <a href="ma.html">
+                <div class="app-button" id="date" name="date">
+                    <b class="titlel">开始时间-结束时间 </b><span class="kstime" id="kssj"></span>
+                </div>
+            </a>
+            <hr>
+            <div class="app-button" data-target="page3">
+                <b class="titlel">提醒 </b><span class="kstime" id="txxx"> </span>
+
+            </div>
+            <div class="app-button" data-target="page4">
+                <b class="titlel">重复 </b><span class="kstime" id="cfxx"></span>
+            </div>
+            <div class="app-button">
+                <b class="titlel">日历账号 </b><span class="kstime">本地日历</span>
+            </div>
+            <div class="app-button">
+                <b class="titlel">时区 </b><span class="kstime">（GMT +8:00）北京 ></span>
+            </div>
+            <hr>
+            <input type="text" class="app-input" placeholder="请输入地点" id="didian">
+            <input type="text" class="app-input" placeholder="请输入备注" id="beizhu">
+
+        </div>
+    </div>
+    <script src="js/app.min.js"></script>
+    <script src="js/zepto.js"></script>
+    <!-- <script src="js/vue.js"></script> -->
+    <script type="text/javascript">
+        var dt = new Date();
+        var year = dt.getFullYear();
+        var month = dt.getMonth();
+        var dday = dt.getDate(); //获取几号
+        var hours = dt.getHours();
+        var dqsj = [year, month + 1, dday];
+        var xtime = localStorage.getItem("time");
+        var tx = localStorage.getItem("tx");
+        var xsj = [year, month + 1, dday];
+        App.controller('page2', function (page) {
+            var showtx = function () {
+                $(page).find(".right").on('click', function () {
+                    var neir = document.querySelector('#neir').value;
+                    var kssj = document.querySelector('#kssj').innerHTML;
+                    var txxx = document.querySelector('#txxx').innerHTML;
+                    var cfxx = document.querySelector('#cfxx').innerHTML;
+                    var didian = document.querySelector('#didian').value;
+                    var beizhu = document.querySelector('#beizhu').value;
+                    var b = [neir, kssj, txxx, cfxx, didian, beizhu]
+                    var i = localStorage.length
+                    if (neir == "") {
+                        App.dialog({
+                            title: '警告',
+                            text: '活动内容不可为空！',
+                            okButton: '确定',
+                        }, function (Agree) {
+                            if (Agree) {
+
+                            }
+                        });
+                    } else {
+                        App.dialog({
+                            title: '创建',
+                            text: '是否创建此事件，创建后不可更改',
+                            okButton: '确定',
+                            cancelButton: '取消'
+                        }, function (Agree) {
+                            if (Agree) {
+                                localStorage.setItem(i, b)
+                                localStorage.setItem('time', ["设置开始时间", "设置结束时间"])
+                                App.load('home');
+                            }
+                        });
+
+                    }
+                })
+            }
+            showtx();
+            $(page).find("#txxx").html(localStorage.getItem('tx'))
+            $(page).find("#cfxx").html(localStorage.getItem('cf'))
+            $(page).find("#kssj").html(localStorage.getItem('time'))
+        })
+        App.controller('page5', function (page) {
+            var showtx = function () {
+                var str = (new Array())
+                var storage = window.localStorage;
+                for (var i = 0; i < storage.length; i++) {
+                    if (localStorage.key(i) == "cf") {
+                        continue;
+                    } else if (localStorage.key(i) == "time") {
+                        continue;
+                    } else if (localStorage.key(i) == "tx") {
+                        continue;
+                    } else if (localStorage.key(i) == "__APP_JS_TIME__/C:/app/www/index.html") {
+                        continue;
+                    } else if (localStorage.key(i) == "__APP_JS_STACK__/C:/app/www/index.html") {
+                        continue;
+                    } else {
+                        str += '<div class="app-section daat" shijian="' + localStorage.key(i) + '">'
+                            + '<b>' + localStorage.getItem(localStorage.key(i)).split(',')[0] + '</b>' +
+                            '<span class="kstime"> ' + localStorage.getItem(localStorage.key(i)).split(',')[1] + '</span>' +
+                            '<p>' + '活动地点:' + localStorage.getItem(localStorage.key(i)).split(',')[5] + '</p>' +
+                            '<p>' + '备注：' + localStorage.getItem(localStorage.key(i)).split(',')[6] + '<span class="kstime"> ' + localStorage.getItem(localStorage.key(i)).split(',')[2] + '</span>' + '</p>' +
+                            '</div>';
+                    }
+                }
+                $(page).find('.curr').html(str);
+                // $(page).find('.dedac').on('click', function () {
+                //     var shijian = $(this).parent(".daat").attr("shijian")
+                //     localStorage.removeItem(shijian)
+                //     $(this).parent(".daat").remove();
+                // })
+                $(page).find(".daat").longTap(function () {
+                    var shijian = $(this).attr("shijian")
+                    var sh = $(this)
+                    App.dialog({
+                        title: '删除',
+                        text: '是否删除此事件',
+                        okButton: '确定',
+                        cancelButton: '取消'
+                    }, function (Agree) {
+                        if (Agree) {
+                            localStorage.removeItem(shijian)
+                            sh.remove();
+                        }
+                    });
+                });
+            }
+            showtx();
+        })
+        App.controller('page3', function (page) {
+            var showtx = function () {
+                $(page).find('.tx').on('click', function () {
+                    for (var i = 0; i < 8; i++) {
+                        $(page).find('.app-section').removeClass('bcolor');
+                    }
+                    $(this).parent('.app-section').addClass('bcolor');
+                    var tx = $(this).html();
+                    localStorage.setItem("tx", tx);
+                    var ss = localStorage.getItem("tx");
+
+                });
+                $(page).find('.left').on('click', function () {
+                    //history.go(0);
+                })
+            }
+            showtx();
+        })
+        App.controller('page4', function (page) {
+            var showtx = function () {
+                $(page).find('.tx').on('click', function () {
+                    for (var i = 0; i < 8; i++) {
+                        $(page).find('.app-section').removeClass('bcolor');
+                    }
+                    $(this).parent('.app-section').addClass('bcolor');
+                    var tx = $(this).html();
+                    localStorage.setItem("cf", tx);
+                });
+                $(page).find('.left').on('click', function () {
+
+                })
+            }
+            showtx();
+        })
+        App.controller('home', function (page) {
+            var showDate = function () {
+                $(page).find('#cd').html(year + "年" + (month + 1) + "月");
+                var days = (new Date(year, month + 1, 0)).getDate();
+                var wday = (new Date(year, month, 1)).getDay();
+                //==================================================
+                var str = (new Array(wday + 1)).join("<div></div>");
+                for (let i = 1; i <= days; i++) {
+                    str += '<div class="app-button day" iid="' + i + '">' + i + '</div>';
+                }
+                //==================================================
+                $(page).find('.tianjia').on('click', function () {
+                    //history.go(0);
+                })
+                $(page).find('.curr').html(str);
+                $(page).find('.day').ready(function () {
+                    var dday = dt.getDate();
+                    var yday = dt.getMonth();
+                    if (yday == month) {
+                        $('.day[iid ="' + dday + '"]').addClass("green");
+                    }
+                })
+                $(page).find('.day').on('click', function () {
+                    var day = $(this).attr('iid');
+                    var sj = [year, month + 1, day];
+                    //console.log(localStorage.getItem('xztime'))
+                    //console.log("当前年月日：", year, month + 1, day); 
+                    for (var i = 0; i < 32; i++) {
+                        $('.day[iid ="' + i + '"]').removeClass("green");
+                    }
+                    $(this).addClass("green");
+                });
+            };
+            showDate();
+            $(page).find('.btn-prev').on('click', function () {
+                if (--month < 0) {
+                    month = 11;
+                    year--; // year < 0
+                }
+                showDate();
+            });
+            $(page).find('.btn-next').on('click', function () {
+                if (++month > 11) {
+                    month = 0;
+                    year++;
+                }
+                showDate();
+            });
+            // 1. 怎么取得当月天数
+            // 2. 怎么取得第一天的星期数
+        });
+        App.load("page2");
+      /*   try {
+            App.restore('home');
+        } catch (err) {
+            App.load('home');
+        } */
+    </script>
+</body>
+
+</html>
